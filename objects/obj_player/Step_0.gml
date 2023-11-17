@@ -20,30 +20,5 @@ if (place_meeting(x+hsp,y,Object2))
 		hsp = 0	
 	}
 
-/*
-if place_free(x,y)
-	{
-		onground=0
-	}
-	else onground=1
 
-if keyboard_check(ord("D"))
-	{
-	hspeed += .15
-	if hspeed >= 7
-	 {
-		hspeed = 7
-	 }
-	}
-if keyboard_check(ord("A"))
-	{
-	hspeed -= .15
-	if hspeed <= -7
-	 {
-		hspeed = -7
-	 }
-	}
-if keyboard_check(vk_space) && onground == 1
-	{
-		vspeed=5
-	}
+HOLA
