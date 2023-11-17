@@ -13,7 +13,11 @@ x = x + hsp;
 
 if (place_meeting(x+hsp,y,Object2))
 	{
-		//go back to reference
+		while (!place_meeting(x+sign(hsp),y,Object2))
+			{
+				x = x + sign(hsp);
+			}
+		hsp = 0	
 	}
 
 /*
