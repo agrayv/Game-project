@@ -1,4 +1,4 @@
-_key_left = keyboard_check(ord("TEst"));
+_key_left = keyboard_check(ord("as"));
 _key_right = keyboard_check(ord("D"));
 _key_jump = keyboard_check(vk_space);
 
