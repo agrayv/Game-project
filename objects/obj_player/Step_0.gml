@@ -21,4 +21,3 @@ if (place_meeting(x+hsp,y,Object2))
 	}
 
 
-I hate github
