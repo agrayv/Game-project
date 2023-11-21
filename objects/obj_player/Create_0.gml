@@ -1,5 +1,5 @@
-onground = 0;
-hsp = 0;
-vsp = 0;
-grv = 0.1;
-walksp = 4;
+_onground = 0;
+_hsp = 0;
+_vsp = 0;
+_grv = 0.3;
+_walksp = 4;
