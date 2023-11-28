@@ -1,3 +1,5 @@
+if global.startmode == 0
+{
 _key_left = keyboard_check(ord("A"));
 _key_right = keyboard_check(ord("D"));
 _key_jump = keyboard_check(vk_space);
@@ -35,3 +37,4 @@ if (place_meeting(x,y+_vsp,obj_wall))
 	}
 y = y + _vsp;
 
+}
