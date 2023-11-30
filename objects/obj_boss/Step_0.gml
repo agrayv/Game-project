@@ -1,10 +1,42 @@
-if _bosStart == 1
+// moving cmd's
+
+var _move = _bos_spd * _bos_dir
+
+//
+if _bos_start == 1
 	{
 		image_alpha += 0.0025
 		if image_alpha == 1
 			{
-				_bosStart = 0
-				hspeed = _bosSP // * random
+				_bos_start = 0
+				hspeed = _move
+				
 			}
+	else hspeed = 0	
+	}
+if (position_meeting(61,y,obj_boss))
+	{
+		hspeed = _bos_spd * 1
+	}
+if (position_meeting(1471,y,obj_boss))
+	{
+		hspeed = _bos_spd * -1
 	}
 	
+//attack cooldown calculations
+var _bossattack = _bos_cd * random_range(1, 1.5)
+
+if _bos_atk_can == 1 && _bos_start == 0
+	{
+		_bos_atk_can = 0
+		alarm[0]= _bossattack
+		alarm[1]= _bossattack + 60
+		hspeed = _move
+	}
+//boss attack
+if _bos_atk > 0
+	{
+		hspeed = 0
+	}
+if _bos_atk > 1
+		{}
