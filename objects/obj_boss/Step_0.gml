@@ -1,5 +1,4 @@
 // moving cmd's
-
 var _move = _bos_spd * _bos_dir
 
 //
@@ -17,10 +16,12 @@ if _bos_start == 1
 if (position_meeting(61,y,obj_boss))
 	{
 		hspeed = _bos_spd * 1
+		_bos_dir = 1
 	}
 if (position_meeting(1471,y,obj_boss))
 	{
 		hspeed = _bos_spd * -1
+		_bos_dir = -1
 	}
 	
 //attack cooldown calculations
