@@ -32,6 +32,7 @@ if _bos_atk_can == 1 && _bos_start == 0
 		_bos_atk_can = 0
 		alarm[0]= _bossattack
 		alarm[1]= _bossattack + 60
+		alarm[2]= _bossattack 
 		hspeed = _move
 	}
 //boss attack
@@ -39,7 +40,3 @@ if _bos_atk > 0
 	{
 		hspeed = 0
 	}
-if _bos_atk == 1
-		{
-			instance_create_depth(x,y,0,obj_boss_attack1)
-		}
