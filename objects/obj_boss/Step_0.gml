@@ -39,5 +39,7 @@ if _bos_atk > 0
 	{
 		hspeed = 0
 	}
-if _bos_atk > 1
-		{}
+if _bos_atk == 1
+		{
+			instance_create_depth(x,y,0,obj_boss_attack1)
+		}
