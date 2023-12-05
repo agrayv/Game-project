@@ -14,3 +14,7 @@ image_alpha = 0
 
 //
 _bos_atk1 = 20
+_bossattacktime = 60
+_bossattacktimeALT = 0
+
+//

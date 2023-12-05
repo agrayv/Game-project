@@ -31,8 +31,7 @@ if _bos_atk_can == 1 && _bos_start == 0
 	{
 		_bos_atk_can = 0
 		alarm[0]= _bossattack
-		alarm[1]= _bossattack + 60
-		alarm[2]= _bossattack 
+		alarm[2]= _bossattack
 		hspeed = _move
 	}
 //boss attack
