@@ -48,14 +48,14 @@ if (place_meeting(x,y+_vsp,obj_wall))
 	}
 y = y + _vsp;
 
-if _dash == 0 && _dashamnt > 0
+if _dash == 0 && global._dashamnt > 0
 	{
 		if keyboard_check(vk_lshift) 
 			{
 				alarm[0]=15
 				_dash = 1
 				_vsp = 0
-				_dashamnt -= 1
+				global._dashamnt -= 1
 			}
 			//else _vsp = _vsp + _grv
 		

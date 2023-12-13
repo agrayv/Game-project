@@ -10,7 +10,7 @@
   "collisionKind": 1,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
-  "edgeFiltering": false,
+  "edgeFiltering": true,
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dbe8383a-bf19-4c24-9ebe-515c0d28d397",},
@@ -18,7 +18,7 @@
   "gridX": 0,
   "gridY": 0,
   "height": 64,
-  "HTile": false,
+  "HTile": true,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"72fbd02b-a2ac-4dcf-bf4f-774d5bf73b27","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
@@ -92,6 +92,6 @@
     "path": "texturegroups/Default",
   },
   "type": 0,
-  "VTile": false,
+  "VTile": true,
   "width": 64,
 }

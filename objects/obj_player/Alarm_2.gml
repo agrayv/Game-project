@@ -1,2 +1,2 @@
-_dashamnt += 1
+global._dashamnt += 1
 alarm[2] = 240
