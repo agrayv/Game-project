@@ -60,4 +60,10 @@ if _dash == 0 && global._dashamnt > 0
 			//else _vsp = _vsp + _grv
 		
 	}
+if global._dashamnt > 3
+	{
+		global._dashamnt -= 1
+	}
+
+	
 }
