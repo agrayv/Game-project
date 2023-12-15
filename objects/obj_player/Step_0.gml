@@ -65,5 +65,28 @@ if global._dashamnt > 3
 		global._dashamnt -= 1
 	}
 
-	
+if _invc = 0
+	{
+	with (instance_place(x,y,obj_boss_attack1))  
+		{  
+		with (obj_boss_attack1)
+			{
+			if i = 1
+				{
+				mask_index = 1
+				show_debug_message("called boss atk from player" + string(ev_collision));
+				with (obj_player) 
+					{
+						if _invc = 0
+						{
+							health -= 7
+							_invc = 1
+							image_speed = .5
+							alarm[3] = _invcfr
+						}
+					}
+				}
+			}
+		}
+	}
 }
