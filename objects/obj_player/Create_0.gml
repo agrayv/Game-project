@@ -6,7 +6,8 @@ _grv = 0.3;
 _walksp = 4;
 _dash = 0
 _dashsp = 0
-global._dashamnt = 3
+_dashamnt = 3
+_dashcd = 0
 //
 alarm[2] = 240
 //
