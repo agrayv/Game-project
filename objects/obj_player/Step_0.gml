@@ -67,15 +67,16 @@ if _dashamnt < 3 && _dashcd = 0
 		_dashcd = 1
 	}
 	
-with (instance_place(x,y,obj_boss_attack1))
+/*
+with (obj_boss_attack1)
 	{
-	with (obj_boss_attack1)
+	if i = 1 
 		{
-		if i = 1	
+		with (instance_place(x,y,obj_player))
 			{
 			with (obj_player) 
 				{
-				if _invc = 0 ^^ _dash = not 1
+				if _invc = 0 &&  _dash == !1 //&& collision_point(x,y, obj_player,false,false)
 					{
 						health -= 7
 						_invc = 1
@@ -88,3 +89,17 @@ with (instance_place(x,y,obj_boss_attack1))
 		}
 	}
 }
+*/
+with (obj_boss_attack1)
+	{
+		if i == 1 && (instance_place(x,y,obj_player))
+					{
+						show_debug_message("player collide with atk " + string(ev_collision));
+					}
+			
+		else if (!instance_place(x,y,obj_player))
+					{
+						show_debug_message("player did not collide with atk " + string(ev_collision));
+					}		
+			}
+	}
