@@ -90,16 +90,29 @@ with (obj_boss_attack1)
 	}
 }
 */
-with (obj_boss_attack1)
-	{
-		if i == 1 && (instance_place(x,y,obj_player))
-					{
-						show_debug_message("player collide with atk " + string(ev_collision));
-					}
-			
-		else if (!instance_place(x,y,obj_player))
+
+
+	
+		with (obj_boss_attack1)
+		{
+			if i==1
+			{
+				with (obj_player)
+				if _invc = 0 &&  _dash == !1 && place_meeting(x,y,obj_boss_attack1) 
+				{
+					health -= 7
+					_invc = 1
+					image_speed = .5
+					alarm[3] = _invcfr
+					show_debug_message("player collide with atk " + string(ev_collision));
+				}
+				else 
 					{
 						show_debug_message("player did not collide with atk " + string(ev_collision));
 					}		
 			}
-	}
+		}
+}
+						
+			
+		
