@@ -69,36 +69,11 @@ if _dashamnt < 3 && _dashcd = 0
 	
 /*
 with (obj_boss_attack1)
-	{
-	if i = 1 
-		{
-		with (instance_place(x,y,obj_player))
-			{
-			with (obj_player) 
-				{
-				if _invc = 0 &&  _dash == !1 //&& collision_point(x,y, obj_player,false,false)
-					{
-						health -= 7
-						_invc = 1
-						image_speed = .5
-						alarm[3] = _invcfr
-						show_debug_message("called boss atk from player" + string(ev_collision));
-					}
-				}
-			}
-		}
-	}
-}
-*/
-
-
-	
-		with (obj_boss_attack1)
 		{
 			if i==1
 			{
 				with (obj_player)
-				if _invc = 0 &&  _dash == !1 && place_meeting(x,y,obj_boss_attack1) 
+				if _invc == 0 &&  _dash == !1 && place_meeting(x,y,obj_boss_attack1) 
 				{
 					health -= 7
 					_invc = 1
@@ -113,6 +88,44 @@ with (obj_boss_attack1)
 			}
 		}
 }
-						
-			
-		
+*/
+if place_meeting(x,y,obj_boss_attack1)
+{
+	_atkcnt = 1
+}
+else if place_empty(x,y,obj_boss_attack1)
+{
+	_atkcnt = 0
+}
+
+	if _atkcnt == 1
+	{
+		show_debug_message("atkcnt true ")
+	}
+	if _atkcnt == 0
+	{
+		show_debug_message("atkcnt false ")
+	}
+	/*
+				if _invc == 0 &&  _dash == !1
+				{
+					with (obj_boss_attack1)
+					if i == 3 
+					{
+						with (obj_player)
+						if _atkcnt == 1
+						{
+							health -= 7
+							_invc = 1
+							image_speed = .5
+							alarm[3] = _invcfr
+							show_debug_message("player collide with atk " + string(ev_collision));
+						}
+					}
+				}
+				else if (!place_meeting(x,y,obj_boss_attack1))
+					{
+						show_debug_message("player did not collide with atk " + string(ev_collision));
+					}		
+			*/
+}
