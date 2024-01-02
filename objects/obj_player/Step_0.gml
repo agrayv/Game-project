@@ -89,23 +89,19 @@ with (obj_boss_attack1)
 		}
 }
 */
-if place_meeting(x,y,obj_boss_attack1)
-{
-	_atkcnt = 1
-}
-else if place_empty(x,y,obj_boss_attack1)
-{
-	_atkcnt = 0
-}
 
-	if _atkcnt == 1
-	{
-		show_debug_message("atkcnt true ")
-	}
-	if _atkcnt == 0
-	{
-		show_debug_message("atkcnt false ")
-	}
+
+
+
+    if (!instance_place(x,y,obj_boss_attack1))
+		{
+			show_debug_message("atkcnt false ")
+		}
+	else 
+		{
+			show_debug_message("atkcnt true ")
+		}
+
 	/*
 				if _invc == 0 &&  _dash == !1
 				{
