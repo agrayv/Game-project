@@ -17,3 +17,5 @@ instance_create_depth(x,y,-100,obj_dash_ui)
 health = 100
 _invc = 0
 _invcfr = 30
+//
+_bossatk1var = 0

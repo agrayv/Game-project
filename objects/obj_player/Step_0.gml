@@ -1,3 +1,8 @@
+ with (obj_boss_attack1)
+	{
+		_bossatk1var = i
+	}
+
 if global.startmode == 0
 {
 _key_left = keyboard_check(ord("A"));
@@ -93,23 +98,27 @@ with (obj_boss_attack1)
 
 
 
-    if (!instance_place(x,y,obj_boss_attack1))
+   /* if (!instance_place(obj_player.x,obj_player.y,obj_boss_attack1))
 		{
 			show_debug_message("atkcnt false ")
 		}
 	else 
 		{
-			show_debug_message("atkcnt true ")
+			with (obj_boss_attack1)
+			if i == 3
+				{
+					show_debug_message("atkcnt true ")
+				}
 		}
 
-	/*
+	
 				if _invc == 0 &&  _dash == !1
 				{
 					with (obj_boss_attack1)
 					if i == 3 
 					{
 						with (obj_player)
-						if _atkcnt == 1
+						while place_meeting(x,y,obj_boss_attack1)
 						{
 							health -= 7
 							_invc = 1
@@ -124,4 +133,15 @@ with (obj_boss_attack1)
 						show_debug_message("player did not collide with atk " + string(ev_collision));
 					}		
 			*/
+	while place_meeting(x,y,obj_boss_attack1) && _bossatk1var == 3 && _invc == 0
+		{
+			health -= 7
+			_invc = 1
+			image_speed = .5
+			alarm[3] = _invcfr
+			show_debug_message("player collide with atk " + string(ev_collision));
+		}
+		
+		
+		
 }
