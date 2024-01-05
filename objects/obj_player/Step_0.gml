@@ -71,6 +71,28 @@ if _dashamnt < 3 && _dashcd = 0
 		alarm[2]=240
 		_dashcd = 1
 	}
+if collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false)
+	{
+	with obj_player
+		{
+		while (collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false) == noone)
+			{
+				continue;
+			}
+		
+		with obj_boss_attack1 if i == 3
+			{
+				with obj_player if _invc == 0 && _dash != 1
+				{
+					health -= 7
+					_invc = 1
+					image_speed = .5
+					alarm[3] = _invcfr
+					show_debug_message("player collide with atk " + string(ev_collision));
+				}
+			}
+		}
+	}
 	
 /*
 with (obj_boss_attack1)
@@ -132,7 +154,7 @@ with (obj_boss_attack1)
 					{
 						show_debug_message("player did not collide with atk " + string(ev_collision));
 					}		
-			*/
+			
 	while place_meeting(x,y,obj_boss_attack1) && _bossatk1var == 3 && _invc == 0
 		{
 			health -= 7
@@ -141,7 +163,7 @@ with (obj_boss_attack1)
 			alarm[3] = _invcfr
 			show_debug_message("player collide with atk " + string(ev_collision));
 		}
-		
+		*/
 		
 		
 }
