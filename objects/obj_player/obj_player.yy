@@ -12,7 +12,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_boss_attack1","path":"objects/obj_boss_attack1/obj_boss_attack1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":3,"eventType":2,"isDnD":false,},
   ],
-  "managed": false,
+  "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",

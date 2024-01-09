@@ -73,31 +73,45 @@ if _dashamnt < 3 && _dashcd = 0
 	}
 
 
-	with obj_player
-		{
-		while (collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false) == noone)
+with obj_player
+	{
+		while (place_meeting(x,y,obj_boss_attack1))
 			{
+				if (!place_meeting(x,y,obj_boss_attack1))
+					{
+						continue;
+					}
+				//health -= 7
+				//_invc = 1
+				//image_speed = .5
+				//alarm[3] = _invcfr
+				show_debug_message("player collide with atk ");		
 				break;
 			}
-		do 
-			{
-			if (collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false) == noone)
-				{
-					continue;
-				}
-			if (collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false) != noone)
-				health -= 7
-				_invc = 1
-				image_speed = .5
-				alarm[3] = _invcfr
-				show_debug_message("player collide with atk " + string(ev_collision));	
-			}
-		until (collision_circle(obj_player.x,obj_player.y,15,obj_boss_attack1,false,false) == noone)
-		}
+	}
 
-	
-	
+
+
+
 /*
+with obj_player
+	{
+		while (place_meeting(x,y,obj_wall))
+			{
+				if (!place_meeting(x,y,obj_wall))
+					{
+						_incntc = 0
+						show_debug_message("no longer in contact with wall")
+						continue;
+					}
+				_incntc = 1
+				show_debug_message("in contact with wall")
+				break;
+			}
+	}
+	
+	
+
 with (obj_boss_attack1)
 		{
 			if i==1
