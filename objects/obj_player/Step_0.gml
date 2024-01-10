@@ -100,11 +100,8 @@ with obj_player
 			{
 				if (!place_meeting(x,y,obj_wall))
 					{
-						_incntc = 0
-						show_debug_message("no longer in contact with wall")
 						continue;
 					}
-				_incntc = 1
 				show_debug_message("in contact with wall")
 				break;
 			}
