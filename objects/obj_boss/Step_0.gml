@@ -33,6 +33,7 @@ if _bos_atk_can == 1 && _bos_start == 0
 		alarm[0]= _bossattack
 		alarm[2]= _bossattack
 		hspeed = _move
+		global._player_pos = obj_player.x
 	}
 //boss attack
 if _bos_atk > 0

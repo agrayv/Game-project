@@ -1,0 +1,1 @@
+direction = point_direction(x, y, obj_player.x+random_range(80, -80), obj_player.y+random_range(80, -80))

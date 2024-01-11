@@ -75,9 +75,9 @@ if _dashamnt < 3 && _dashcd = 0
 
 with obj_player
 	{
-		while (place_meeting(x,y,obj_boss_attack1))
+		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack1))
 			{
-				if (!place_meeting(x,y,obj_boss_attack1))
+				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack1))
 					{
 						continue;
 					}
@@ -89,7 +89,6 @@ with obj_player
 				break;
 			}
 	}
-
 
 
 
