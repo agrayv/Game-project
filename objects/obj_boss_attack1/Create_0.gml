@@ -1,9 +1,7 @@
-
-
+mask_index = spr_empty;
 image_speed = 0
 image_xscale = distance_to_object(obj_player)
 
-i = 70
+i = 80
 
-move_towards_point(global._player_pos,obj_player.y,0.001)
-image_angle = direction
+image_angle = point_direction(x,y,global._player_pos+random_range(100,-100),obj_player.y)

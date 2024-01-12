@@ -22,6 +22,7 @@
     {"name":"obj_boss_attack1","order":4,"path":"objects/obj_boss_attack1/obj_boss_attack1.yy",},
     {"name":"spr_playbutton","order":3,"path":"sprites/spr_playbutton/spr_playbutton.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"spr_empty","order":6,"path":"sprites/spr_empty/spr_empty.yy",},
     {"name":"spr_dash_ui","order":5,"path":"sprites/spr_dash_ui/spr_dash_ui.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"obj_playbutton","order":3,"path":"objects/obj_playbutton/obj_playbutton.yy",},
