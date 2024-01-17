@@ -38,6 +38,9 @@
     "name": "spr_boss_attack1",
     "path": "sprites/spr_boss_attack1/spr_boss_attack1.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_empty",
+    "path": "sprites/spr_empty/spr_empty.yy",
+  },
   "visible": true,
 }

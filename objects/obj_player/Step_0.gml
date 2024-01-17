@@ -77,7 +77,7 @@ with obj_player
 	{
 		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack1))
 			{
-				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack1)) || _dash == 1 || _invc == 1
+				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack1)) || _dash == 1 || _invc == 1 
 					{
 						break;
 					}
@@ -87,7 +87,7 @@ with obj_player
 				image_speed = .5
 				alarm[3] = _invcfr
 				show_debug_message("player collide with atk ");		
-				break;	
+				break;
 			}	
 	}
 

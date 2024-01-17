@@ -1,4 +1,4 @@
-mask_index = spr_empty;
+mask_index = spr_empty
 image_speed = 0
 image_xscale = distance_to_object(obj_player)
 
