@@ -1,4 +1,4 @@
-mask_index = spr_empty
+object_set_mask(obj_boss_attack1, -1)
 image_speed = 0
 image_xscale = distance_to_object(obj_player)
 

@@ -82,12 +82,23 @@ with obj_player
 						break;
 					}
 				
-				health -= 7
-				_invc = 1
-				image_speed = .5
-				alarm[3] = _invcfr
-				show_debug_message("player collide with atk ");		
-				break;
+				//if (object_get_mask(obj_boss_attack1) == -1)
+				//	{
+				//		break;
+				//	}
+		
+					if (object_get_mask(obj_boss_attack1) == -1)
+						{
+							break;
+						}
+			
+					health -= 7
+					_invc = 1
+					image_speed = .5
+					alarm[3] = _invcfr
+					show_debug_message("player collide with atk ");		
+					break;
+					}
 			}	
 	}
 
@@ -107,78 +118,19 @@ with obj_player
 			}
 	}
 	
-	
-
-with (obj_boss_attack1)
-		{
-			if i==1
+while object_exists(obj_wall)
+	{
+		if object_get_mask(obj_wall) == 0 || _cd == 1
 			{
-				with (obj_player)
-				if _invc == 0 &&  _dash == !1 && place_meeting(x,y,obj_boss_attack1) 
-				{
-					health -= 7
-					_invc = 1
-					image_speed = .5
-					alarm[3] = _invcfr
-					show_debug_message("player collide with atk " + string(ev_collision));
-				}
-				else 
-					{
-						show_debug_message("player did not collide with atk " + string(ev_collision));
-					}		
+				break;
 			}
-		}
-}
-*/
-
-
-
-
-   /* if (!instance_place(obj_player.x,obj_player.y,obj_boss_attack1))
-		{
-			show_debug_message("atkcnt false ")
-		}
-	else 
-		{
-			with (obj_boss_attack1)
-			if i == 3
-				{
-					show_debug_message("atkcnt true ")
-				}
-		}
-
-	
-				if _invc == 0 &&  _dash == !1
-				{
-					with (obj_boss_attack1)
-					if i == 3 
-					{
-						with (obj_player)
-						while place_meeting(x,y,obj_boss_attack1)
-						{
-							health -= 7
-							_invc = 1
-							image_speed = .5
-							alarm[3] = _invcfr
-							show_debug_message("player collide with atk " + string(ev_collision));
-						}
-					}
-				}
-				else if (!place_meeting(x,y,obj_boss_attack1))
-					{
-						show_debug_message("player did not collide with atk " + string(ev_collision));
-					}		
 			
-	while place_meeting(x,y,obj_boss_attack1) && _bossatk1var == 3 && _invc == 0
-		{
-			health -= 7
-			_invc = 1
-			image_speed = .5
-			alarm[3] = _invcfr
-			show_debug_message("player collide with atk " + string(ev_collision));
-		}
+		show_debug_message("mask off")
+		break
+	}
+
+
+
 		*/
 		
 		
-
-}
