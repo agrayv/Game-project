@@ -9,6 +9,9 @@ _dashsp = 0
 _dashamnt = 3
 _dashcd = 0
 _atkcnt = 0
+_slam = 0
+_slamsp = 0
+_slamtimr = 0
 //
 alarm[2] = 240
 //

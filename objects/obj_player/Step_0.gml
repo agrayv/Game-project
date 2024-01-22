@@ -1,33 +1,65 @@
- with (obj_boss_attack1)
-	{
-		_bossatk1var = i
-	}
-
 if global.startmode == 0
 {
 _key_left = keyboard_check(ord("A"));
 _key_right = keyboard_check(ord("D"));
 _key_jump = keyboard_check(vk_space);
+_key_control = keyboard_check(vk_control)
 
 var _move = _key_right - _key_left;
-
-_hsp = (_move * _walksp);
-
+if _slam == 0
+	{
+		_hsp = (_move * _walksp)
+	}
+	
 x = x + _hsp + _dashsp;
 
-_vsp = _vsp + _grv;
-
+_vsp = _vsp + _grv + _slamsp
+ 
 if _dash == 1
 	{
 		_dashsp = _hsp * 2
 		_vsp = 0
 	}
 	else _dashsp = 0
+
+if _slamtimr > 0
+	{
+		_slamtimr -= 1
+	}
 	
 if (place_meeting(x,y+1,obj_wall)) && (_key_jump)
 	{
-		_vsp = -7
+		if _slamtimr > 0
+			{
+				_vsp = -10
+			}
+		else _vsp = -7
 	}
+
+if (!place_meeting(x,y+_vsp,obj_wall)) && (_key_control)
+	{
+		_slam = 1
+	}
+	
+if _slam == 1
+	{
+		while (place_meeting(x,y+_vsp,obj_wall))
+			{
+				_slam = 0
+				_slamsp = 0
+				_slamtimr = 30
+				break;
+			}
+		while (!place_meeting(x,y+_vsp,obj_wall))
+			{
+				_hsp = 0
+				_slamsp = 5
+				break;
+			}
+	}
+				
+				
+	
 //
 
 if (place_meeting(x+_hsp,y,obj_wall))
@@ -50,6 +82,7 @@ if (place_meeting(x,y+_vsp,obj_wall))
 				{
 					_dash = 0
 				}
+			
 	}
 y = y + _vsp;
 

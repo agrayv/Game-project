@@ -6,3 +6,10 @@ if _bos_atk == 1
 		_bossattacktime = 70
 	}
 alarm[1] = _bossattacktime
+
+if _bos_atk == 2
+	{
+		_bos_atk1 = 20
+		_bossattacktime = 70
+	}
+alarm[1] = _bossattacktime
