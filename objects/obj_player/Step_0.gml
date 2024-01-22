@@ -87,10 +87,11 @@ with obj_player
 				//		break;
 				//	}
 		
-					if (object_get_mask(obj_boss_attack1) == -1)
+					if (object_get_mask(obj_boss_attack1) != spr_boss_attack1)
 						{
 							break;
 						}
+			
 			
 					health -= 7
 					_invc = 1

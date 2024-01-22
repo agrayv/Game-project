@@ -5,7 +5,7 @@ if i <= 15
 	}
 if i = 3
 	{
-		mask_index = spr_boss_attack1
+		object_set_mask(obj_boss_attack1, 0)
 		image_yscale += 2
 	}
 if i <= 0
