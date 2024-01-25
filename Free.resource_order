@@ -26,6 +26,7 @@
     {"name":"spr_dash_ui","order":5,"path":"sprites/spr_dash_ui/spr_dash_ui.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"obj_playbutton","order":3,"path":"objects/obj_playbutton/obj_playbutton.yy",},
+    {"name":"spr_boss_attack2","order":7,"path":"sprites/spr_boss_attack2/spr_boss_attack2.yy",},
     {"name":"obj_boss","order":2,"path":"objects/obj_boss/obj_boss.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
   ],

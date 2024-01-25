@@ -12,6 +12,7 @@ _atkcnt = 0
 _slam = 0
 _slamsp = 0
 _slamtimr = 0
+_slamcd = 15
 //
 alarm[2] = 240
 //

@@ -47,6 +47,7 @@
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
     {"id":{"name":"obj_playbutton","path":"objects/obj_playbutton/obj_playbutton.yy",},},
     {"id":{"name":"spr_TEMPcharacter","path":"sprites/spr_TEMPcharacter/spr_TEMPcharacter.yy",},},
+    {"id":{"name":"spr_boss_attack2","path":"sprites/spr_boss_attack2/spr_boss_attack2.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
