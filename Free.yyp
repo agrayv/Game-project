@@ -34,6 +34,7 @@
     "IDEVersion": "2023.6.0.89",
   },
   "resources": [
+    {"id":{"name":"obj_boss_attack2","path":"objects/obj_boss_attack2/obj_boss_attack2.yy",},},
     {"id":{"name":"obj_dash_ui","path":"objects/obj_dash_ui/obj_dash_ui.yy",},},
     {"id":{"name":"spr_boss_attack1","path":"sprites/spr_boss_attack1/spr_boss_attack1.yy",},},
     {"id":{"name":"spr_TEMPboss","path":"sprites/spr_TEMPboss/spr_TEMPboss.yy",},},

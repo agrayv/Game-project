@@ -16,6 +16,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_boss_attack2","order":6,"path":"objects/obj_boss_attack2/obj_boss_attack2.yy",},
     {"name":"obj_dash_ui","order":5,"path":"objects/obj_dash_ui/obj_dash_ui.yy",},
     {"name":"spr_boss_attack1","order":4,"path":"sprites/spr_boss_attack1/spr_boss_attack1.yy",},
     {"name":"spr_TEMPboss","order":2,"path":"sprites/spr_TEMPboss/spr_TEMPboss.yy",},
