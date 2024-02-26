@@ -43,42 +43,24 @@ if _bos_atk == 2
 				
 		
 		/*
-		// Define the three coordinates
-point1 = point_distance(x, y, x1, y1);
-point2 = point_distance(x, y, x2, y2);
-point3 = point_distance(x, y, x3, y3);
+		// Define the positions where you want to spawn obj_bossattack2
+		var positions = ds_list_create();
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x1, y1)); // Coordinates for position 1
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x2, y2)); // Coordinates for position 2
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x3, y3)); // Coordinates for position 3
 
-// Initialize variables to store the closest point and its distance
-closest_point = -1; // Indicates no closest point found yet
-closest_distance = -1;
+		// Sort positions based on distance from obj_player
+		ds_list_sort(positions, false); // Sorting in ascending order (closest to farthest)
 
-// Perform the loop to find the closest point
-do {
-    // Check which point is closest
-    if (point1 < closest_distance || closest_distance == -1) {
-        closest_distance = point1;
-        closest_point = 1;
-    }
-    if (point2 < closest_distance || closest_distance == -1) {
-        closest_distance = point2;
-        closest_point = 2;
-    }
-    if (point3 < closest_distance || closest_distance == -1) {
-        closest_distance = point3;
-        closest_point = 3;
-    }
-} until(true); // This loop will run indefinitely until the closest point is found
+		// Spawn obj_bossattack2 at each of the closest positions
+		for (var i = 0; i < 3; i++) {
+		    var closestPosition = positions[| i];
+		    var spawnX = obj_player.x + lengthdir_x(closestPosition, distance_to_object(obj_player));
+		    var spawnY = obj_player.y + lengthdir_y(closestPosition, distance_to_object(obj_player));
+    
+		    instance_create(spawnX, spawnY, obj_bossattack2);
+		}
 
-// Now spawn an object at the closest point
-switch (closest_point) {
-    case 1:
-        instance_create(x1, y1, obj_to_spawn);
-        break;
-    case 2:
-        instance_create(x2, y2, obj_to_spawn);
-        break;
-    case 3:
-        instance_create(x3, y3, obj_to_spawn);
-        break;
-}
+		// Clean up the list
+		ds_list_destroy(positions);
 */

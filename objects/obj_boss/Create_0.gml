@@ -7,9 +7,11 @@ _bos_spd = 3
 _bos_atk = 0
 _bos_atk_can = 1
 _bos_dir = 1
+
 y1 = 512
 y2 = 580
 y3 = 648
+
 closest_point = -1;
 closest_distance = -1;
 point1 = point_distance(obj_player.x, obj_player.y, 0, y1);
