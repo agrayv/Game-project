@@ -7,7 +7,7 @@ if _bos_atk == 1 && _bos_atk1 > 0
 		
 if _bos_atk == 2
 	{
-		
+		/*
 	do {
 		if (point1 < closest_distance || closest_distance == -1) 
 			{
@@ -42,12 +42,12 @@ if _bos_atk == 2
 	}
 				
 		
-		/*
+		*/
 		// Define the positions where you want to spawn obj_bossattack2
 		var positions = ds_list_create();
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x1, y1)); // Coordinates for position 1
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x2, y2)); // Coordinates for position 2
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, x3, y3)); // Coordinates for position 3
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y1)); // Coordinates for position 1
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y2)); // Coordinates for position 2
+		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y3)); // Coordinates for position 3
 
 		// Sort positions based on distance from obj_player
 		ds_list_sort(positions, false); // Sorting in ascending order (closest to farthest)
@@ -56,11 +56,25 @@ if _bos_atk == 2
 		for (var i = 0; i < 3; i++) {
 		    var closestPosition = positions[| i];
 		    var spawnX = obj_player.x + lengthdir_x(closestPosition, distance_to_object(obj_player));
-		    var spawnY = obj_player.y + lengthdir_y(closestPosition, distance_to_object(obj_player));
+		    var spawnY;
     
-		    instance_create(spawnX, spawnY, obj_bossattack2);
+		    switch (i) 
+			{
+		        case 0:
+		            spawnY = y1;
+		        case 1:
+		            spawnY = y2;
+		        case 2:
+		            spawnY = y3;
+			}
+		    instance_create_depth(spawnX, spawnY, 0, obj_boss_attack2);
+			if i == 3 
+				{
+					continue; 
+				}
+			alarm[2] = 20
 		}
 
 		// Clean up the list
 		ds_list_destroy(positions);
-*/
+	}
