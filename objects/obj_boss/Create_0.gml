@@ -11,6 +11,9 @@ _bos_dir = 1
 y1 = 512
 y2 = 580
 y3 = 648
+point1 = point_distance(obj_player.x,obj_player.y, x,y1)
+point2 = point_distance(obj_player.x,obj_player.y, x,y2)
+point3 = point_distance(obj_player.x,obj_player.y, x,y3)
 
 closest_point = -1;
 closest_distance = -1;

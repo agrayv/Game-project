@@ -42,12 +42,12 @@ if _bos_atk == 2
 	}
 				
 		
-		*/
+		
 		// Define the positions where you want to spawn obj_bossattack2
 		var positions = ds_list_create();
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y1)); // Coordinates for position 1
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y2)); // Coordinates for position 2
-		ds_list_add(positions, point_direction(obj_player.x, obj_player.y, 0, y3)); // Coordinates for position 3
+		ds_list_add(positions, point_distance(obj_player.x, obj_player.y, 0, y1)); // Coordinates for position 1
+		ds_list_add(positions, point_distance(obj_player.x, obj_player.y, 0, y2)); // Coordinates for position 2
+		ds_list_add(positions, point_distance(obj_player.x, obj_player.y, 0, y3)); // Coordinates for position 3
 
 		// Sort positions based on distance from obj_player
 		ds_list_sort(positions, false); // Sorting in ascending order (closest to farthest)
@@ -56,7 +56,7 @@ if _bos_atk == 2
 		for (var i = 0; i < 3; i++) {
 		    var closestPosition = positions[| i];
 		    var spawnX = obj_player.x + lengthdir_x(closestPosition, distance_to_object(obj_player));
-		    var spawnY;
+		    var spawnY = obj_player.y + lengthdir_y(closestPosition, distance_to_object(obj_player));
     
 		    switch (i) 
 			{
@@ -77,4 +77,41 @@ if _bos_atk == 2
 
 		// Clean up the list
 		ds_list_destroy(positions);
+	}
+	*/
+	// Create variables
+	
+	}
+
+while _bos_atk == 2
+	{
+		if point1 < point2 || point3
+			{
+				if instance_position(x,y1,obj_boss_attack2)
+					{
+						continue;
+					}
+				instance_create_depth(x, y1, 0, obj_boss_attack2)
+				continue;
+			}
+		if point2 < point3 || point1
+			{
+				if instance_position(x,y1,obj_boss_attack2)
+					{
+						continue;
+					}
+				instance_create_depth(x, y2, 0, obj_boss_attack2)
+				continue;
+			}
+		if point3 < point1 || point2
+			{
+				if instance_position(x,y1,obj_boss_attack2)
+					{
+						continue;
+					}
+				instance_create_depth(x, y3, 0, obj_boss_attack2)
+				continue;
+			}
+		alarm[2] = 20
+		break;
 	}
