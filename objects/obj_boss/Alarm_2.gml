@@ -83,35 +83,34 @@ if _bos_atk == 2
 	
 	}
 
-while _bos_atk == 2
+if _bos_atk == 2
 	{
-		if point1 < point2 || point3
+		var player_pos_near = ds_list_create();
+
+			// Adding template lines of code to the list
+			ds_list_add(player_pos_near, point1 < point2 || point3);
+			ds_list_add(player_pos_near, point2 < point3 || point1);
+			ds_list_add(player_pos_near, point3 < point1 || point2);
+			
+		var selected_pos = ds_list_find_value(player_pos_near, 0)
+		switch(player_pos_near)
 			{
-				if instance_position(x,y1,obj_boss_attack2)
+				case 0:
 					{
-						continue;
+						instance_create_depth(x, y1, 0, obj_boss_attack2)
+						show_debug_message("bossatk_2 created at y1")
 					}
-				instance_create_depth(x, y1, 0, obj_boss_attack2)
-				continue;
-			}
-		if point2 < point3 || point1
-			{
-				if instance_position(x,y1,obj_boss_attack2)
+				case 1:
 					{
-						continue;
+						instance_create_depth(x, y2, 0, obj_boss_attack2)
+						show_debug_message("bossatk_2 created at y2")
 					}
-				instance_create_depth(x, y2, 0, obj_boss_attack2)
-				continue;
-			}
-		if point3 < point1 || point2
-			{
-				if instance_position(x,y1,obj_boss_attack2)
+				case 2:
 					{
-						continue;
+						instance_create_depth(x, y3, 0, obj_boss_attack2)
+						show_debug_message("bossatk_2 created at y3")
 					}
-				instance_create_depth(x, y3, 0, obj_boss_attack2)
-				continue;
 			}
-		alarm[2] = 20
-		break;
-	}
+		ds_list_destroy(player_pos_near)
+		
+}
