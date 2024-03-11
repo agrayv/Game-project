@@ -8,6 +8,10 @@ _bos_atk = 0
 _bos_atk_can = 1
 _bos_dir = 1
 
+atkspawn = 0
+atkloopNo = 0
+atkspawnNo = 0
+
 y1 = 512
 y2 = 580
 y3 = 648

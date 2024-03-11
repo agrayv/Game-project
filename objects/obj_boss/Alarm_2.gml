@@ -85,6 +85,51 @@ if _bos_atk == 2
 
 if _bos_atk == 2
 	{
+		if atkloopNo < 3
+			{
+			atkspawnNo = choose(1,2,3)
+			switch(atkspawnNo)
+				{
+					case 1:
+						{
+							atkspawn = y1
+							atkloopNo += 1
+							alarm[2]=20
+							show_debug_message("reached case 1:")
+							break;
+						}
+					case 2:
+						{
+							atkspawn = y2
+							atkloopNo += 1
+							alarm[2]=20
+							show_debug_message("reached case 2:")
+							break;
+						}
+					case 3:
+						{
+							atkspawn = y3
+							atkloopNo += 1
+							alarm[2]=20
+							show_debug_message("reached case 3:")
+							break;
+						}
+				}
+				if atkspawnNo == 3 && atkloopNo < 3
+					{
+						atkspawnNo = 1
+					}
+				instance_create_depth(x,atkspawn, 0, obj_boss_attack2)
+			}
+		else if atkloopNo == 3
+			{
+				atkspawn = 0
+				atkloopNo = 0
+				atkspawnNo = 0
+				_bos_atk = 0
+			}
+	}
+	/*{
 		var player_pos_near = ds_list_create();
 
 			// Adding template lines of code to the list
