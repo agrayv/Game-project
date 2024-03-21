@@ -8,7 +8,7 @@ if _bos_atk == 1
 
 if _bos_atk == 2
 	{
-		_bossattacktime = 120
+		_bossattacktime = 180
 	}
 
 

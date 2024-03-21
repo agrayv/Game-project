@@ -129,7 +129,7 @@ if _bos_atk == 2
 					{
 						atkspawnNo = 3
 					}
-				alarm[2]=20
+				alarm[2]=45
 			}
 		else if atkloopNo == 3
 			{
