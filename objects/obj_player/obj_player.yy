@@ -37,7 +37,12 @@
     {"x":0.0,"y":64.0,},
   ],
   "physicsStartAwake": false,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"obj_boss_attack_ALL","filters":[],"listItems":[
+        "\"obj_boss_attack1\"",
+        "\"obj_boss_attack2\"",
+      ],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"obj_boss_attack1\"","varType":6,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "spr_TEMPcharacter",
