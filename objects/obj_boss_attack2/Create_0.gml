@@ -1,5 +1,5 @@
 i = 60
-image_xscale = room_width
+//image_xscale = room_width
 
 image_speed = 1/2
 

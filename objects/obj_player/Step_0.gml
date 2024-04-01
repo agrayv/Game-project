@@ -119,20 +119,16 @@ if _dashamnt < 3 && _dashcd = 0
 		_dashcd = 1
 	}
 
+obj_boss_attack_ALL = place_meeting(obj_player.x,obj_player.y,obj_boss_attack1) || place_meeting(obj_player.x,obj_player.y,obj_boss_attack2)
 
 with obj_player
 	{
-		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack1))
+		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack_ALL))
 			{
 				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack_ALL)) || _dash == 1 || _invc == 1 
 					{
 						break;
 					}
-				
-				//if (object_get_mask(obj_boss_attack1) == -1)
-				//	{
-				//		break;
-				//	}
 		
 					if (object_get_mask(obj_boss_attack1) != spr_boss_attack1)
 						{
