@@ -1,12 +1,10 @@
-i-=1
-if i == 5
+if image_index == 10
 	{
-		image_speed = 0
-		image_index = 15
-		object_set_mask(obj_boss_attack2, 1)
+		object_set_mask(obj_boss_attack2, 0)
+		show_debug_message("reached code")
 	}
-if i <= 0
+if image_index == 16
 	{
-		//instance_destroy()
+		instance_destroy()
 	}
 

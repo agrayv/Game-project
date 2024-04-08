@@ -123,9 +123,9 @@ obj_boss_attack_ALL = place_meeting(obj_player.x,obj_player.y,obj_boss_attack1) 
 
 with obj_player
 	{
-		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack_ALL))
+		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack1))
 			{
-				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack_ALL)) || _dash == 1 || _invc == 1 
+				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack1)) || _dash == 1 || _invc == 1 
 					{
 						break;
 					}
@@ -134,12 +134,6 @@ with obj_player
 						{
 							break;
 						}
-					if (object_get_mask(obj_boss_attack2) != spr_boss_attack2)
-						{
-							break;
-						}
-			
-			
 					health -= 7
 					_invc = 1
 					image_speed = .5
@@ -149,7 +143,27 @@ with obj_player
 					}
 			}	
 	}
+with obj_player
+	{
+		while (place_meeting(obj_player.x,obj_player.y,obj_boss_attack2))
+			{
+				if (!place_meeting(obj_player.x,obj_player.y,obj_boss_attack2)) || _dash == 1 || _invc == 1 
+					{
+						break;
+					}
 
+					if (object_get_mask(obj_boss_attack2) != spr_boss_attack2)
+						{
+							break;
+						}
+					health -= 7
+					_invc = 1
+					image_speed = .5
+					alarm[3] = _invcfr
+					show_debug_message("player collide with atk ");		
+					break;
+			}
+	}
 
 
 /*
