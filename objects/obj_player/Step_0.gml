@@ -152,10 +152,10 @@ with obj_player
 						break;
 					}
 
-					if (object_get_mask(obj_boss_attack2) != spr_boss_attack2)
-						{
-							break;
-						}
+					//if (object_get_mask(obj_boss_attack2) != spr_boss_attack2)
+					//	{
+					//		break;
+					//	}
 					health -= 7
 					_invc = 1
 					image_speed = .5
